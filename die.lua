@@ -2,7 +2,7 @@ local pfs,plrs = game:GetService("PathfindingService"),game:GetService("Players"
 local http,rs = game:GetService("HttpService"),game:GetService("ReplicatedStorage")
 local hrp = plrs.LocalPlayer.Character.HumanoidRootPart
 function pathFind(pos)
-    if not typeof(pos) == ("Vector3") then return end
+    if not typeof(pos) == "Vector3" then return end
     local path = pfs:CreatePath({});path:ComputeAsync(hrp.Position,pos)
     local pathfinding_fol = Instance.new("Folder",workspace)
     pathfinding_fol.Name = http:GenerateGUID(true)
